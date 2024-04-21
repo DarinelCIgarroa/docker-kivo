@@ -1,0 +1,25 @@
+{
+	"name": "frontend-app",
+	"dockerComposeFile": [
+	  "../docker-compose.yml"
+	],
+	"service": "frontend-app-kivo",
+	"shutdownAction": "none",
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "eamodio.gitlens",
+		  "sdras.vue-vscode-snippets",
+		  "joshjg.vscode-graphql",
+		  "octref.vetur",
+		  "Vue.volar",
+		  "esbenp.prettier-vscode",
+		  "dbaeumer.vscode-eslint",
+		  "formulahendry.auto-rename-tag",
+		  "benjaminadk.emojis4git"
+		]
+	  }
+	},
+	"workspaceFolder": "/app"
+  }
+  
