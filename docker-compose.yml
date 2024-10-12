@@ -41,20 +41,39 @@ services:
     depends_on:
       - postgres-kivo
 
+  backend-app-kivo:
+    build:
+      args:
+         USER: ${USER}
+         UID: ${UID:-1000}
+      context: ./
+      dockerfile: ./docker/php.Dockerfile
+    container_name: backend-app-kivo
+    image: backend-app-kivo
+    networks:
+        - project-network
+    volumes:
+        - ./backend:/var/www
+        - ./.docker/docker/php.ini:/usr/local/etc/php/php.ini
+        - ./docs:/usr/share/docs
+        - ./.docker/docker/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+    extra_hosts:
+        - "host.docker.internal:host-gateway"
+
   frontend-app-kivo:
     build:
-      context: .
+      context: ./
       dockerfile: ./docker/nodeJs.DockerFile
+      args:
+        USER: ${USER}
+        UID: ${UID:-1000}
     networks:
       - project-network
     ports:
       - "9000:9000"
       - "4040:4040"
-    environment:
-      - NGROK_AUTH=1XbXVFdOj0J1BuP3cffNnS3wyOb_7CdjuQ8VhvexVjEvwgvp5
-      - NGROK_REGION=us
     volumes:
-      - ./frontend/kivo-project:/app 
+      - ./frontend:/usr/src/app
       - ./docs:/usr/share/docs
     deploy:
       resources:

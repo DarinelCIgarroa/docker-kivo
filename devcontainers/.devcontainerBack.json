@@ -1,0 +1,29 @@
+{
+	"name": "project-app",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"service": "project-app",
+	"shutdownAction": "none",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"bmewburn.vscode-intelephense-client",
+				"xdebug.php-debug",
+				"carlboo.tinker-this",
+				"googlecloudtools.cloudcode",
+				"mhutchie.git-graph",
+				"eamodio.gitlens",
+				"benjaminadk.emojis4git",
+				"MehediDracula.php-namespace-resolver"
+			],
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/zsh",
+				"terminal.integrated.defaultProfile.linux": "zsh"
+			}
+		}
+	},
+	"workspaceFolder": "/var/www",
+	"postCreateCommand": "sh setup.sh"
+}
+
