@@ -12,7 +12,7 @@ WORKDIR /usr/src/app
 # Install system dependencies
 RUN apk update && apk add --no-cache linux-headers
 RUN apk add zsh
-RUN npm install -g @quasar/cli
+RUN npm install -g @quasar/cli --no-cache
 
 # Clear cache
 RUN rm -rf /var/cache/apk/*
