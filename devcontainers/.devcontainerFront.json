@@ -20,7 +20,6 @@
 		]
 	  }
 	},
-	"workspaceFolder": "/app",
-	"postCreateCommand": "chmod +x setup.sh && sh setup.sh"
+	"postCreateCommand": "sh setup.sh",
+	"workspaceFolder": "/usr/src/app"
   }
-  
