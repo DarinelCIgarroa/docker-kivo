@@ -1,9 +1,9 @@
 {
-	"name": "project-app",
+	"name": "backend-app-kivo",
 	"dockerComposeFile": [
 		"../docker-compose.yml"
 	],
-	"service": "project-app",
+	"service": "backend-app-kivo",
 	"shutdownAction": "none",
 	"customizations": {
 		"vscode": {
