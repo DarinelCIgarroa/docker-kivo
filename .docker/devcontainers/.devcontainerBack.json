@@ -11,11 +11,12 @@
 				"bmewburn.vscode-intelephense-client",
 				"xdebug.php-debug",
 				"carlboo.tinker-this",
-				"googlecloudtools.cloudcode",
 				"mhutchie.git-graph",
 				"eamodio.gitlens",
 				"benjaminadk.emojis4git",
-				"MehediDracula.php-namespace-resolver"
+				"MehediDracula.php-namespace-resolver",
+				"shardulm94.trailing-spaces",
+				"alefragnani.Bookmarks"
 			],
 			"settings": {
 				"terminal.integrated.shell.linux": "/bin/zsh",
