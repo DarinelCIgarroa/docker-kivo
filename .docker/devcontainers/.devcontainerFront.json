@@ -16,7 +16,8 @@
 		  "esbenp.prettier-vscode",
 		  "dbaeumer.vscode-eslint",
 		  "formulahendry.auto-rename-tag",
-		  "benjaminadk.emojis4git"
+		  "benjaminadk.emojis4git",
+		  "dbaeumer.vscode-eslint"
 		]
 	  }
 	},
